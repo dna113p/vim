@@ -92,6 +92,7 @@ set title
 set number
 
 " --- Behaviors ---
+set backupcopy=yes
 set autoread
 set wildmenu
 set hidden
@@ -211,11 +212,14 @@ nmap <leader>fef ggVG=
 "}}}
 " Plugin Config {{{
 
-" ---  AIRLINE FONT SYMBOLS ---
+" --- SYNTASTIC ESLINT JAVASCRIPT ---
+let g:syntastic_javascript_checkers = ['eslint']
+
+" --- AIRLINE FONT SYMBOLS ---
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'dark'
 
-" ---  CTRLP IGNORE node_modules ---
+" --- CTRLP IGNORE node_modules ---
 let g:ctrlp_custom_ignore = 'node_modules'
 
 " --- JSX SYNTAX in .JS ---
