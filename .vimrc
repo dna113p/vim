@@ -34,7 +34,6 @@ Plugin 'gmarik/Vundle.vim'
         "Document/Project Navigation
             Plugin 'EasyMotion'
             Plugin 'ctrlpvim/ctrlp.vim'
-            Plugin 'scrooloose/nerdtree'
         "Debugging and Syntax Help
             Plugin 'scrooloose/syntastic'
             Plugin 'joonty/vdebug'
@@ -46,6 +45,7 @@ Plugin 'gmarik/Vundle.vim'
             Plugin 'scrooloose/nerdcommenter'
             Plugin 'godlygeek/tabular'
             Plugin 'tpope/vim-surround'
+            Plugin 'editorconfig/editorconfig-vim'
 
 
 " All of your Plugins must be added before the following line
@@ -122,8 +122,7 @@ set wildignore+=*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,
             \.sass-cache,*.class,*.scssc,*.cssc,sprockets%*,*.lessc
 
 " --- Visual ---
-set showmatch
-set matchtime=2
+set matchtime=5
 set list
 
 " show trailing space as dots and carrots for extended lines
@@ -174,6 +173,7 @@ imap <C-l> <C-x><C-l>
 " Use ; for :
 nnoremap ; :
 vnoremap ; :
+nnoremap : ;
 
 " --- Leader Commands ---
 
@@ -212,7 +212,7 @@ nmap <leader>fef ggVG=
 "}}}
 " Plugin Config {{{
 
-" --- SYNTASTIC ESLINT JAVASCRIPT ---
+" --- SYNTASTIC JAVASCRIPT LINTING ---
 let g:syntastic_javascript_checkers = ['eslint']
 
 " --- AIRLINE FONT SYMBOLS ---
